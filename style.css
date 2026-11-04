@@ -1,3 +1,8 @@
+/* Загальне правило для коректного розрахунку розмірів (Box-sizing) */
+* {
+    box-sizing: border-box;
+}
+
 /* Оголошення кастомних властивостей (змінних) */
 :root {
     --primary-color: #2563eb;
@@ -16,16 +21,23 @@ body {
     padding: 0;
 }
 
-/* Шапка та навігація */
+/* Шапка та навігація на Flexbox */
 header {
     background-color: var(--card-bg);
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     gap: 20px;
 }
@@ -43,7 +55,7 @@ nav a:hover {
 /* Основний вміст та секції */
 main {
     padding: 20px;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -54,23 +66,46 @@ section {
     border-radius: 8px;
 }
 
+/* Контейнер карток проєктів на Flexbox */
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Блоки карток усередині секції проєктів */
+#projects div.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+article {
+    background-color: var(--bg-color);
+    padding: 15px;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 250px;
+}
+
 /* Типографічна ієрархія */
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--primary-color);
-    margin-top: 0;
+    margin: 0;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--text-color);
     border-bottom: 2px solid var(--bg-color);
     padding-bottom: 5px;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--primary-color);
+    margin-top: 0;
 }
 
 /* Стилізація кнопки форми */
