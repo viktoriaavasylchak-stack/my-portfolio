@@ -24,6 +24,8 @@
         <section id="about">
             <h2>Про мене</h2>
             <p>Вітаю! Я студентка, яка вивчає сучасні вебтехнології та вебдизайн.</p>
+            <!-- Додано зображення з атрибутом alt -->
+            <img src="https://via.placeholder.com/300x200" alt="Приклад зображення профілю або розробки" width="300" height="200">
         </section>
 
         <section id="projects">
@@ -39,9 +41,30 @@
         </section>
     </main>
 
-    <!-- Підвал сайту -->
+    <!-- Секція контактів із формою -->
     <footer id="contacts">
-        <p>Контакти: посилання на GitHub та соцмережі.</p>
+        <h2>Контакти</h2>
+        <p>Зв'яжіться зі мною через форму нижче:</p>
+        
+        <form action="#" method="POST">
+            <div>
+                <label for="name">Ім'я:</label><br>
+                <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+            </div>
+            <br>
+            <div>
+                <label for="message">Повідомлення:</label><br>
+                <textarea id="message" name="message" rows="4" placeholder="Ваше повідомлення..." required></textarea>
+            </div>
+            <br>
+            <button type="submit">Надіслати</button>
+        </form>
+
         <p>&copy; 2026 Моє Портфоліо</p>
     </footer>
 
