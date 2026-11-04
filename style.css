@@ -1,12 +1,7 @@
-/* Сітка проєктів на основі CSS Grid */
-#projects div.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-article {
-    background-color: var(--bg-color);
-    padding: 15px;
-    border-radius: 6px;
+/* Альтернативний набір властивостей для темної теми */
+.dark-theme {
+    --primary-color: #60a5fa;
+    --text-color: #f3f4f6;
+    --bg-color: #111827;
+    --card-bg: #1f2937;
 }
